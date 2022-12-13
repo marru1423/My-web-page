@@ -21,12 +21,9 @@ main.container{
 nav{
 	display: flex;
 	justify-content: space-between;
-	justify-items: center;
+	align-items: center;
 	padding-left: 2rem;
 	padding-right: 2rem;
-}
-div.menu{
-	margin-top: 47px;
 }
 div.menu a{
 	text-decoration: none;
