@@ -8,8 +8,7 @@ body{
 	background-color: #070710;
 }
 header.navigation{
-	width: 97%;
-	margin: 0;
+	margin: 1rem auto;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 /* =========Container========== */
@@ -45,13 +44,7 @@ div.menu  input[type=text]{
 }
 /* =======LOGO======= */
 .logo{
-	width: 180px;
-	height: 90px;
-	cursor: pointer;
-	border: 2px solid rgb(247, 244, 244);
-	border-radius: 10px;
-	margin-top: 10px;
-	margin-left: 2rem;
+	border-radius: 0.5rem;
 }
 div.logo-design h1{
 	font-size: 15px;
