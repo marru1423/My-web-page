@@ -12,6 +12,7 @@ main{
 /* ========Header Navbigation====== */
 .header-nav{
     margin: 1rem auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .nav-1{
     display: flex;
@@ -61,16 +62,17 @@ div.navbigation-2{
     font-variant: small-caps;
 }
 div.dropbox{
-    background-color: rgb(24, 19, 19);
     display: flex;
-    justify-content:left;
-    gap: 0.2rem;
-    margin: 2rem auto;
+    justify-content:  left;
+    gap: 1rem;
+    margin: 0.5rem auto;
+    background-color: #dddddd;
 }
 div.dropbox a{
     text-decoration: none;
-    color: #fff;
-    padding: 10px;
+	font-size: 17px;
+    color: #000;
+
 }
 div.dropbox a:hover{
     color: rgb(187, 8, 8);
@@ -85,7 +87,7 @@ div.container-v{
 }
 div.video-content{
         display: inline-block;
-        justify-content: space-between;
+        justify-content: center;
  }
 div.image-content{
         overflow: hidden;
@@ -113,6 +115,27 @@ div.image-content img:hover {
         filter: brightness(1); 
 }
 /*======Video Design END====== */
+
+
+/* ======button design */
+div.btn{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem auto;
+}
+div.btn a{
+    text-decoration: none;
+    color: #fff;
+    background-color: #fc0000;
+    padding: 0.6rem;
+    border-radius: 0.5rem;
+}
+div.btn a:hover{
+    background-color: aquamarine;
+    color: #000;
+}
+
 
 /* ======Footer Elements====== */
 
@@ -157,6 +180,6 @@ div.socials a{
 }
 div.socials a:hover{
     color: #fc0000;
-    transform: scale(1.1);
+    transform: scale(2.1);
 }
 
