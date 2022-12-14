@@ -36,6 +36,11 @@
             text-decoration: none;
         }
 
+        /* disable default outline when link is hovered or focused */
+        a:hover, a:focus {
+            outline: none;
+        }
+
         /* utility class to turn background color to gray */
         .bg-gray {
             background-color: rgb(31 41 55);
@@ -121,13 +126,13 @@
          * with transparency using opacity property
          * https://www.w3schools.com/css/css_image_transparency.asp
          */
-        .card:hover::before {
+        .grid a:hover .card::before, .grid a:focus .card::before {
             background-color: rgb(17 24 39);
             opacity: 0.5;
         }
 
         /* scale our card img when card is hovered */
-        .card:hover img {
+        .grid a:hover .card img, .grid a:focus .card img {
             transform: scale(1.1);
         }
 
