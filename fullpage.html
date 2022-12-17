@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Enable responsive layout on mobile devices: try viewing this page on your mobile device -->
+    <!-- https://www.w3schools.com/html/html_responsive.asp -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Full Page</title>
+
+    <!-- Reset cross-browser default styles -->
+    <!-- https://meyerweb.com/eric/tools/css/reset/ -->
+    <link rel="stylesheet" href="https://unpkg.com/modern-normalize@1.1.0/modern-normalize.css">
+
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/card.css">
+    <link rel="stylesheet" href="css/featured.css">
+</head>
+<!-- Set our body to gray background and all text color to white -->
+<body class="bg-gray text-white">
+    <!-- 
+        main tag contains all section different sections of the website
+        we are setting the left and right padding to 1rem
+    -->
+    <main>
+        <!-- Header Start -->
+        <header class="bg-white">
+            <div class="lg:flex align-items-center justify-between px-4 py-2">
+                <a href="fullpage.html" class="logo-link flex align-items-center space-x-2">
+                    <img src="images/logo.png" class="logo-image" alt="Sample Movie Website" width="70" height="70">
+                    <h1 class="logo-title">Sample Movie Website</h1>
+                </a>
+                <nav class="lg:flex align-items-center">
+                    <a href="index.html">Net Fix</a>
+                    <a href="navbar.html">Navbar</a>
+                    <a href="card.html">Card Grid</a>
+                    <a href="featured.html">Feature</a>
+                    <a href="positioning.html">Absolute Positioning</a>
+                </nav>
+            </div>
+        </header>
+        <!-- Header End -->
+
+        <!-- Feature section start -->
+        <section class="feature">
+            <img src="images/hunterxhunter.jpeg" alt="Hunter × Hunter">
+
+            <div class="feature-text-container px-4 py-16">
+                <h1 class="feature-title">Hunter × Hunter</h1>
+                <!--
+                    Technically we can do this without having to use
+                    display flex but a new line in our code causes us to have extra space
+                    between elements
+                    https://stackoverflow.com/a/46427048/12478479
+                -->
+                <div class="feature-meta flex align-items-center space-x-4">
+                    <span class="feature-type">TV Series</span>
+                    <span class="feature-rating">&#9733; 8.0</span>
+                    <span class="feature-genre">Action, Adventure, Shounen, Super Power</span>
+                </div>
+                <p class="feature-description">Gon Freecs, a young boy that lives on a small island learns that his father who he doesn’t remember is an extremely famous man and has become somewhat of an amazing hunter. Gon takes the hunter exam to seek out his amazing father, but on the way while teaming up with 3 other candidates, Kurapica, Leorio, and Killua, he learns that there is more to becoming a hunter and the challenges that he must face will be beyond his imaginations. Twelve-year-old Gon Freecss one day discovers that the father he had always been told was dead was alive and well. His Father, Ging, is a Hunter–a member of society’s elite with a license to go anywhere or do almost anything. Gon, determined to follow in his father’s footsteps, decides to take the Hunter Examination and eventually find his father to prove himself as a Hunter in his own right. But on the way, he learns that there is more to becoming a Hunter than previously thought, and the challenges that he must face are considered the toughest in the world.</p>
+
+                <!--
+                    Technically we can do this without having to use
+                    display flex but a new line in our code causes us to have extra space
+                    between elements
+                    https://stackoverflow.com/a/46427048/12478479
+                -->
+                <div class="flex align-items-center space-x-4">
+                    <button class="feature-button px-4 py-2">Watch now</button>
+                    <button class="feature-button px-4 py-2">Add to list</button>
+                </div>
+            </div>
+        </section>
+        <!-- Feature section end -->
+
+        <!-- Card section Start -->
+        <section class="px-4">
+            <!-- title for the section -->
+            <h1>Recently Updated</h1>
+
+            <!-- description of the section or aka section body copy -->
+            <!-- <p>This is a responsive grid of cards. I recommend checking the source code to learn how this is done.</p> -->
+
+            <!-- the grid component -->
+            <div class="grid grid-cols gap-4">
+                <!--
+                    grid item
+                    notice that we are wrapping our card component inside an anchor tag
+                -->
+                <a href="#">
+                    <div class="card">
+                        <img class="object-cover" src="images/kimetsu-no-yaiba.jpeg" alt="Kimetsu no Yaiba thumbnail">
+                        <span class="card-title px-4 py-4">Kimetsu no Yaiba</span>
+                    </div>
+                </a>
+
+                <!--
+                    grid item
+                    notice that we are wrapping our card component inside an anchor tag
+                -->
+                <a href="#">
+                    <div class="card">
+                        <img class="object-cover" src="images/hunterxhunter.jpeg" alt="Hunter × Hunter">
+                        <span class="card-title px-4 py-4">Hunter × Hunter</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+        <!-- Card section End -->
+    </main>
+</body>
+</html>

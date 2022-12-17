@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Enable responsive layout on mobile devices: try viewing this page on your mobile device -->
+    <!-- https://www.w3schools.com/html/html_responsive.asp -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sample Navbar</title>
+
+    <!-- Reset cross-browser default styles -->
+    <!-- https://meyerweb.com/eric/tools/css/reset/ -->
+    <link rel="stylesheet" href="https://unpkg.com/modern-normalize@1.1.0/modern-normalize.css">
+
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/code.css">
+
+    <script src="https://unpkg.com/shiki@0.10.1"></script>
+</head>
+<body>
+    <header class="bg-white">
+        <div class="lg:flex align-items-center justify-between px-4 py-2">
+            <a href="fullpage.html" class="logo-link flex align-items-center space-x-2">
+                <img src="images/logo.png" class="logo-image" alt="Sample Movie Website" width="70" height="70">
+                <h1 class="logo-title">Sample Movie Website</h1>
+            </a>
+            <nav class="lg:flex align-items-center">
+                <a href="index.html">Net Fix</a>
+                <a href="navbar.html">Navbar</a>
+                <a href="card.html">Card Grid</a>
+                <a href="featured.html">Feature</a>
+                <a href="positioning.html">Absolute Positioning</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="px-4">
+            <h2>Code snippet: HTML</h2>
+            <pre>
+                <code id="html">
+&lt;header class=&quot;bg-white&quot;&gt;
+    &lt;div class=&quot;lg:flex align-items-center justify-between px-4 py-2&quot;&gt;
+        &lt;a href=&quot;fullpage.html&quot; class=&quot;logo-link flex align-items-center space-x-2&quot;&gt;
+            &lt;img src=&quot;images/logo.png&quot; class=&quot;logo-image&quot; alt=&quot;Sample Movie Website&quot; width=&quot;70&quot; height=&quot;70&quot;&gt;
+            &lt;h1 class=&quot;logo-title&quot;&gt;Sample Movie Website&lt;/h1&gt;
+        &lt;/a&gt;
+        &lt;nav class=&quot;lg:flex align-items-center&quot;&gt;
+            &lt;a href=&quot;index.html&quot;&gt;Net Fix&lt;/a&gt;
+            &lt;a href=&quot;navbar.html&quot;&gt;Navbar&lt;/a&gt;
+            &lt;a href=&quot;card.html&quot;&gt;Card Grid&lt;/a&gt;
+            &lt;a href=&quot;featured.html&quot;&gt;Feature&lt;/a&gt;
+            &lt;a href=&quot;positioning.html&quot;&gt;Absolute Positioning&lt;/a&gt;
+        &lt;/nav&gt;
+    &lt;/div&gt;
+&lt;/header&gt;
+                </code>
+            </pre>
+
+            <h2>Code snippet: CSS</h2>
+
+            <pre>
+                <code id="css">
+/* Reset default link styles */
+a {
+    text-decoration: none;
+}
+
+a:focus {
+    outline: none;
+}
+
+/*************
+ * Utilities *
+ *************/
+.flex {
+    display: flex;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.py-2 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.space-x-2 > * + * {
+    margin-left: 0.5rem;
+}
+
+.space-y-2 > * + * {
+    margin-top: 0.5rem;
+}
+
+.bg-white {
+    background-color: white;
+}
+
+/**************
+ * Components *
+ **************/
+.logo-image {
+    width: 3rem;
+    height: 3rem;
+}
+
+/**
+ * Fill our title with linear gradient color for additional Sass
+ */
+.logo-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1.5rem;
+    background: linear-gradient(90deg, rgb(38 38 38) 50%, rgb(236 72 153) 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-position: 50%;
+    background-size: 200% 200%;
+    transition: all .2s ease-in;
+}
+
+/**
+ * Move the background position of our title when hovered or focused
+ * for additional pizzazz
+ */
+.logo-link:hover .logo-title, .logo-link:focus .logo-title {
+    background-position: 100%;
+}
+
+/**
+ * Add a border bottom and make it transparent
+ */
+nav a {
+    display: block;
+    margin-top: 0.5rem;
+    color: rgb(38 38 38);
+    border-bottom: 2px solid transparent;
+    transition: all .2s ease-in;
+}
+
+/**
+ * Show the hidden border when link is hovered or focused
+ */
+nav a:hover, nav a:focus {
+    border-bottom: 2px solid rgb(236 72 153);
+}
+
+/* Apply changes to our navbar layout when on large screen, make it horizontal */
+@media (min-width: 1024px) {
+    .lg\:flex {
+        display: flex;
+    }
+
+    .lg\:flex-row {
+        flex-direction: row;
+    }
+
+    .logo-image {
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+
+    .logo-title {
+        font-size: 2.5rem;
+    }
+
+    nav a {
+        margin-top: 0;
+        margin-left: 0.5rem;
+    }
+}
+                </code>
+            </pre>
+        </section>
+    </main>
+
+    <script>
+        shiki.getHighlighter({
+                theme: 'material-palenight',
+                langs: ['html', 'css'],
+            })
+            .then(highlighter => {
+                let html = document.getElementById('html').innerText;
+                const htmlCode = highlighter.codeToHtml(html, { lang: 'html' })
+                document.getElementById('html').innerHTML = htmlCode
+
+                let css = document.getElementById('css').innerText;
+                const cssCode = highlighter.codeToHtml(css, { lang: 'css' })
+                document.getElementById('css').innerHTML = cssCode
+            })
+    </script>
+</body>
+</html>

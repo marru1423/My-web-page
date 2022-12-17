@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Sample Positioning</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/modern-normalize@1.1.0/modern-normalize.css">
+
+    <link rel="stylesheet" href="css/navbar.css">
     <style>
         p {
             margin: 0px 0px 1rem;
@@ -15,13 +19,13 @@
             min-height: 400px;
             padding: 2rem;
         }
-        section {
+        .sample-section {
             background: crimson;
             min-height: 200px;
             padding: .5rem;
             position: relative;
         }
-        img {
+        .sample-image {
             background: white;
             position: absolute;
             top: 0px;
@@ -29,12 +33,29 @@
     </style>
 </head>
 <body>
+    <!-- Header Start -->
+    <header class="bg-white">
+        <div class="lg:flex align-items-center justify-between px-4 py-2">
+            <a href="fullpage.html" class="logo-link flex align-items-center space-x-2">
+                <img src="images/logo.png" class="logo-image" alt="Sample Movie Website" width="70" height="70">
+                <h1 class="logo-title">Sample Movie Website</h1>
+            </a>
+            <nav class="lg:flex align-items-center">
+                <a href="index.html">Net Fix</a>
+                <a href="navbar.html">Navbar</a>
+                <a href="card.html">Card Grid</a>
+                <a href="featured.html">Feature</a>
+                <a href="positioning.html">Absolute Positioning</a>
+            </nav>
+        </div>
+    </header>
+    <!-- Header End -->
 
     <main class="container">
         <p>container</p>
-        <section>
+        <section class="sample-section">
             <p>section</p>
-            <img src="https://www.nasa.gov/sites/default/files/thumbnails/image/nasa-logo-web-rgb.png" width="200">
+            <img class="sample-image" src="https://www.nasa.gov/sites/default/files/thumbnails/image/nasa-logo-web-rgb.png" width="200">
         </section>
     </main>
 

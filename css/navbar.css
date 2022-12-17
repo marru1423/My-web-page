@@ -1,0 +1,123 @@
+/* Reset default link styles */
+a {
+    text-decoration: none;
+}
+
+a:focus {
+    outline: none;
+}
+
+/*************
+ * Utilities *
+ *************/
+.flex {
+    display: flex;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.py-2 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.space-x-2 > * + * {
+    margin-left: 0.5rem;
+}
+
+.space-y-2 > * + * {
+    margin-top: 0.5rem;
+}
+
+.bg-white {
+    background-color: white;
+}
+
+/**************
+ * Components *
+ **************/
+.logo-image {
+    width: 3rem;
+    height: 3rem;
+}
+
+/**
+ * Fill our title with linear gradient color for additional Sass
+ */
+.logo-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1.5rem;
+    background: linear-gradient(90deg, rgb(38 38 38) 50%, rgb(236 72 153) 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-position: 50%;
+    background-size: 200% 200%;
+    transition: all .2s ease-in;
+}
+
+/**
+ * Move the background position of our title when hovered or focused
+ * for additional pizzazz
+ */
+.logo-link:hover .logo-title, .logo-link:focus .logo-title {
+    background-position: 100%;
+}
+
+/**
+ * Add a border bottom and make it transparent
+ */
+nav a {
+    display: block;
+    margin-top: 0.5rem;
+    color: rgb(38 38 38);
+    border-bottom: 2px solid transparent;
+    transition: all .2s ease-in;
+}
+
+/**
+ * Show the hidden border when link is hovered or focused
+ */
+nav a:hover, nav a:focus {
+    border-bottom: 2px solid rgb(236 72 153);
+}
+
+/* Apply changes to our navbar layout when on large screen, make it horizontal */
+@media (min-width: 1024px) {
+    .lg\:flex {
+        display: flex;
+    }
+
+    .lg\:flex-row {
+        flex-direction: row;
+    }
+
+    .logo-image {
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+
+    .logo-title {
+        font-size: 2.5rem;
+    }
+
+    nav a {
+        margin-top: 0;
+        margin-left: 0.5rem;
+    }
+}

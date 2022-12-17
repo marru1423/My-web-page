@@ -1,0 +1,10 @@
+pre {
+    margin: 0;
+}
+
+.shiki {
+	border-radius: .25rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	white-space: pre-wrap;
+}

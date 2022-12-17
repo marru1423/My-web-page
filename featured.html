@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Enable responsive layout on mobile devices: try viewing this page on your mobile device -->
+    <!-- https://www.w3schools.com/html/html_responsive.asp -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sample Featured Section</title>
+
+    <!-- Reset cross-browser default styles -->
+    <!-- https://meyerweb.com/eric/tools/css/reset/ -->
+    <link rel="stylesheet" href="https://unpkg.com/modern-normalize@1.1.0/modern-normalize.css">
+
+    <!-- Now using Tailwindcss css reset (Preflight): It was a bad idea -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/tailwindcss@3.2.4/src/css/preflight.css"> -->
+
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/featured.css">
+    <link rel="stylesheet" href="css/code.css">
+
+    <script src="https://unpkg.com/shiki@0.10.1"></script>
+</head>
+<body class="bg-gray text-white">
+    <!-- Header Start -->
+    <header class="bg-white">
+        <div class="lg:flex align-items-center justify-between px-4 py-2">
+            <a href="fullpage.html" class="logo-link flex align-items-center space-x-2">
+                <img src="images/logo.png" class="logo-image" alt="Sample Movie Website" width="70" height="70">
+                <h1 class="logo-title">Sample Movie Website</h1>
+            </a>
+            <nav class="lg:flex align-items-center">
+                <a href="index.html">Net Fix</a>
+                <a href="navbar.html">Navbar</a>
+                <a href="card.html">Card Grid</a>
+                <a href="featured.html">Feature</a>
+                <a href="positioning.html">Absolute Positioning</a>
+            </nav>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Main Start -->
+    <main>
+        <!-- Feature section start -->
+        <section class="feature">
+            <img src="images/hunterxhunter.jpeg" alt="Hunter × Hunter">
+
+            <div class="feature-text-container px-4 py-16">
+                <h1 class="feature-title">Hunter × Hunter</h1>
+                <!--
+                    Technically we can do this without having to use
+                    display flex but a new line in our code causes us to have extra space
+                    between elements
+                    https://stackoverflow.com/a/46427048/12478479
+                -->
+                <div class="feature-meta flex align-items-center space-x-4">
+                    <span class="feature-type">TV Series</span>
+                    <span class="feature-rating">&#9733; 8.0</span>
+                    <span class="feature-genre">Action, Adventure, Shounen, Super Power</span>
+                </div>
+                <p class="feature-description">Gon Freecs, a young boy that lives on a small island learns that his father who he doesn’t remember is an extremely famous man and has become somewhat of an amazing hunter. Gon takes the hunter exam to seek out his amazing father, but on the way while teaming up with 3 other candidates, Kurapica, Leorio, and Killua, he learns that there is more to becoming a hunter and the challenges that he must face will be beyond his imaginations. Twelve-year-old Gon Freecss one day discovers that the father he had always been told was dead was alive and well. His Father, Ging, is a Hunter–a member of society’s elite with a license to go anywhere or do almost anything. Gon, determined to follow in his father’s footsteps, decides to take the Hunter Examination and eventually find his father to prove himself as a Hunter in his own right. But on the way, he learns that there is more to becoming a Hunter than previously thought, and the challenges that he must face are considered the toughest in the world.</p>
+
+                <!--
+                    Technically we can do this without having to use
+                    display flex but a new line in our code causes us to have extra space
+                    between elements
+                    https://stackoverflow.com/a/46427048/12478479
+                -->
+                <div class="flex align-items-center space-x-4">
+                    <button class="feature-button px-4 py-2">Watch now</button>
+                    <button class="feature-button px-4 py-2">Add to list</button>
+                </div>
+            </div>
+        </section>
+        <!-- Feature section end -->
+
+        <section class="px-4">
+            <h2>Code snippet: HTML</h2>
+            <pre>
+                <code id="html">
+&lt;!-- Feature section start --&gt;
+    &lt;section class=&quot;feature&quot;&gt;
+        &lt;img src=&quot;images/hunterxhunter.jpeg&quot; alt=&quot;Hunter &times; Hunter&quot;&gt;
+
+        &lt;div class=&quot;feature-text-container px-4 py-16&quot;&gt;
+            &lt;h1 class=&quot;feature-title&quot;&gt;Hunter &times; Hunter&lt;/h1&gt;
+            &lt;!--
+                Technically we can do this without having to use
+                display flex but a new line in our code causes us to have extra space
+                between elements
+                https://stackoverflow.com/a/46427048/12478479
+            --&gt;
+            &lt;div class=&quot;feature-meta flex align-items-center space-x-4&quot;&gt;
+                &lt;span class=&quot;feature-type&quot;&gt;TV Series&lt;/span&gt;
+                &lt;span class=&quot;feature-rating&quot;&gt;&amp;#9733; 8.0&lt;/span&gt;
+                &lt;span class=&quot;feature-genre&quot;&gt;Action, Adventure, Shounen, Super Power&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;p class=&quot;feature-description&quot;&gt;Gon Freecs, a young boy that lives on a small island learns that his father who he doesn&rsquo;t remember is an extremely famous man and has become somewhat of an amazing hunter. Gon takes the hunter exam to seek out his amazing father, but on the way while teaming up with 3 other candidates, Kurapica, Leorio, and Killua, he learns that there is more to becoming a hunter and the challenges that he must face will be beyond his imaginations. Twelve-year-old Gon Freecss one day discovers that the father he had always been told was dead was alive and well. His Father, Ging, is a Hunter&ndash;a member of society&rsquo;s elite with a license to go anywhere or do almost anything. Gon, determined to follow in his father&rsquo;s footsteps, decides to take the Hunter Examination and eventually find his father to prove himself as a Hunter in his own right. But on the way, he learns that there is more to becoming a Hunter than previously thought, and the challenges that he must face are considered the toughest in the world.&lt;/p&gt;
+
+            &lt;!--
+                Technically we can do this without having to use
+                display flex but a new line in our code causes us to have extra space
+                between elements
+                https://stackoverflow.com/a/46427048/12478479
+            --&gt;
+            &lt;div class=&quot;flex align-items-center space-x-4&quot;&gt;
+                &lt;button class=&quot;feature-button px-4 py-2&quot;&gt;Watch now&lt;/button&gt;
+                &lt;button class=&quot;feature-button px-4 py-2&quot;&gt;Add to list&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+&lt;!-- Feature section end --&gt;
+                </code>
+            </pre>
+
+            <h2>Code snippet: CSS</h2>
+
+            <pre>
+                <code id="css">
+/* Reset button styles */
+
+/**
+    * 1. Change the font styles in all browsers.
+    * 2. Remove the margin in Firefox and Safari.
+    * 3. Remove default padding in all browsers.
+*/
+/* `inherit` value in properties makes the element inherit same property
+    * values on parent element. For example, we set body element `color: white`
+    * then the button text color will also become white since the property of
+    * body element cascades down to its child elements, and button is a child of body
+    */
+    button {
+    font-family: inherit;
+    font-size: 100%;
+    font-weight: inherit;
+    line-height: inherit;
+    color: inherit;
+    margin: 0;
+    padding: 0;
+    border-width: 0;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge and Firefox.
+ */
+button {
+    text-transform: none;
+}
+
+/**
+ * Remove default button styles.
+ */
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+    -webkit-appearance: button;
+    background-color: transparent;
+    background-image: none;
+}
+
+/*************
+ * Utilities *
+ *************/
+
+.bg-gray {
+    background-color: rgb(31 41 55);
+}
+
+.flex {
+    display: flex;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.text-white {
+    color: white;
+}
+
+.px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.py-2 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.py-16 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+/* Utility for controlling the space between child elements. */
+.space-x-4 > * + * {
+    margin-left: 1rem;
+}
+
+.bg-sky-600 {
+    background-color: rgb(2 132 199);
+}
+
+/**************
+ * Components *
+ **************/
+
+.feature {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.feature img {
+    min-width: 100%;
+    max-height: 100vh;
+    object-fit: cover;
+}
+
+.feature-text-container {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    background-image: linear-gradient(to top,rgba(0,0,0, 0.5) 0%, rgba(0,0,0, 0.3) 70%, rgba(0,0,0, 0) 90%);
+}
+
+.feature-title {
+    font-size: 2.5rem;
+    margin: 0 0 1rem;
+}
+
+.feature-type, .feature-genre {
+    font-size: .8rem;
+}
+
+.feature-type {
+    padding: .25rem .5rem;
+    border-radius: .25rem;
+    background-color: darkgreen;
+}
+
+/**
+ * Multi-line ellipsis
+ *
+ * `text-overflow: ellipsis;` doesn't work when the text wraps to an extra line.
+ * To truncate multi-line text and add an ellipsis at the end of the last line
+ * use the experimental -webkit-box box model (it's supported in all major browsers)
+ *
+ * Control how many lines to show with -webkit-line-clamp.
+ * (Not needed anymore: It is important to let the text wrap by setting the
+ * white-space property to pre-wrap or normal).
+ *
+ * https://codefrontend.com/css-ellipsis/
+ *
+ * Paragraphs recommended max width is around 80 characters, makes it easier to read
+ */
+.feature-description {
+    max-width: 80ch;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+
+.feature-button {
+    background-color: rgb(2 132 199);
+    border-radius: 0.25rem;
+}
+                </code>
+            </pre>
+        </section>
+    </main>
+    <!-- Main End -->
+
+    <!-- Footer Start -->
+    <footer></footer>
+    <!-- Footer End -->
+
+    <script>
+        shiki.getHighlighter({
+                theme: 'material-palenight',
+                langs: ['html', 'css'],
+            })
+            .then(highlighter => {
+                let html = document.getElementById('html').innerText;
+                const htmlCode = highlighter.codeToHtml(html, { lang: 'html' })
+                document.getElementById('html').innerHTML = htmlCode
+
+                let css = document.getElementById('css').innerText;
+                const cssCode = highlighter.codeToHtml(css, { lang: 'css' })
+                document.getElementById('css').innerHTML = cssCode
+            })
+    </script>
+</body>
+</html>
